@@ -16,7 +16,7 @@ void setup() {
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_A);
   DigiKeyboard.delay(500);
-  //DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
+  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
   DigiKeyboard.delay(800);
   DigiKeyboard.print("COLOR EF");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
@@ -37,7 +37,7 @@ void setup() {
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_A);
   DigiKeyboard.delay(500);
-  //DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
+  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
   DigiKeyboard.delay(800);
   DigiKeyboard.print("COLOR EF");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
@@ -54,7 +54,7 @@ void setup() {
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_A);
   DigiKeyboard.delay(500);
-  //DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
+  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);    //comment out if uac is off
   DigiKeyboard.delay(800);
   DigiKeyboard.print("COLOR EF");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
