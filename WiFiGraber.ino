@@ -107,7 +107,7 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
   
-  //Light up onboard LED when script is done
+  //Light up onboard LED when payload is done
   int ledPin = 1;
   digitalWrite(ledPin, HIGH);
 }
