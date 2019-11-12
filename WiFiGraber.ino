@@ -18,7 +18,7 @@ void setup() {
   DigiKeyboard.delay(100);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
-  DigiKeyboard.print("MODE 15,1");
+  DigiKeyboard.print("MODE 20,1");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
   DigiKeyboard.print("COLOR EF");
@@ -37,7 +37,7 @@ void setup() {
   DigiKeyboard.delay(100);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
-  DigiKeyboard.print("MODE 15,1");
+  DigiKeyboard.print("MODE 20,1");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
   DigiKeyboard.print("COLOR EF");
@@ -53,7 +53,7 @@ void setup() {
   DigiKeyboard.delay(100);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
-  DigiKeyboard.print("MODE 15,1");
+  DigiKeyboard.print("MODE 20,1");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
   DigiKeyboard.print("COLOR EF");
